@@ -1,0 +1,31 @@
+/*
+
+"""
+It’s important to note that ::part() offers absolutely zero new theoretical power. 
+It is not a rehash of the >>> combinator, it is simply a more convenient and consistent syntax 
+for something authors can already do with custom properties. By separating out the explicitly 
+"published" parts of an element (the shadow part map from the sub-parts that it merely happens to 
+contain, it also helps with encapsulation, as authors can use ::part() without fear of 
+accidental over-styling.
+"""
+https://www.w3.org/TR/css-shadow-parts-1/
+https://css-tricks.com/styling-a-web-component/
+https://meowni.ca/posts/part-theme-explainer/
+*/
+
+domix-term::part(buffer) {
+  min-height: 200px;
+  max-height: 400px;
+  height: 100%;
+  background-color: black;
+  padding: 10px;
+
+  overflow-y: auto;
+  text-align: left;
+}
+
+domix-term::part(buffer-line) {
+  color: burlywood;
+  font-family: "Courier New"; 
+}
+
